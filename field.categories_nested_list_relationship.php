@@ -152,10 +152,6 @@ class Field_Categories_nested_list_relationship
 				'type' => 'INT',
 				'constraint' => 11
 				),
-			'instance_id' => array(
-				'type' => 'INT',
-				'constraint' => 11
-				),
 			'disabled' => array(
 				'type' => 'TINYINT',
 				'constraint' => 1
@@ -175,7 +171,7 @@ class Field_Categories_nested_list_relationship
 		$this->CI->dbforge->create_table($table_name);
 
 		// Make the entries unique. Last thing we need is two relationships to the same master_detail item
-		$this->CI->db->query('ALTER TABLE `'.$this->CI->db->dbprefix($table_name).'` ADD UNIQUE INDEX `Unique Relationships` (`'.$stream->stream_slug.'_id'.'`, `'.$nested_list_stream->stream_slug.'_id'.'`, `instance_id`)');
+		$this->CI->db->query('ALTER TABLE `'.$this->CI->db->dbprefix($table_name).'` ADD UNIQUE INDEX `Unique Relationships` (`'.$stream->stream_slug.'_id'.'`, `'.$nested_list_stream->stream_slug.'_id'.'`)');
 
 		return true;
 	}
