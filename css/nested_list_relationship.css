@@ -1,0 +1,33 @@
+/*	Master Detail List Tree CSS
+---------------------------------------------*/
+
+.tree { background:none; margin-left:1em !important; }
+ol.tree > ol { margin-left: 0 !important; }
+.tree a { text-decoration: none; font-size: 13px; color:#5c5b5b; padding: 1px 1px 1px 15px; background: url('off.png') no-repeat left; }
+.tree a:hover { text-decoration: underline; }
+.tree a.selected { color: black; background: url('on.png') no-repeat left; }
+
+/* Sortable CSS */
+.ui-nestedSortable-error { background:#fbe3e4; color:#8a1f11; }
+
+ol { margin: 0; padding: 0; }
+ol.tree, ol.tree ol { margin: 0; padding: 0; list-style-type: none; cursor: default; }
+ol.tree { margin: 20px; }
+
+.tree li { margin: 5px 0; padding-left: 20px; }
+.tree li div  { padding: 5px 1px 5px 10px; margin: 0; background-color: #eeeeee; -webkit-border-radius: 4px; -moz-border-radius: 4px; -o-border-radius: 4px; border-radius: 4px; }
+.tree.sortable li div { cursor: move; }
+.tree li div:hover { background-color: #dbdbdb; -webkit-border-radius: 4px; -moz-border-radius: 4px; -o-border-radius: 4px; border-radius: 4px; }
+.tree li.placeholder { background-color: #c2c0c0; -webkit-border-radius: 4px; -moz-border-radius: 4px; -o-border-radius: 4px; border-radius: 4px; margin-left: 20px; }
+
+.tree li div.green { background:#ddffdd !important; }
+.tree li div.green a { color: black; background: url('on.png') no-repeat left; }
+
+.tree li div.red { background:#ffdddd !important; }
+.tree li div.red a { text-decoration: none; font-size: 13px; color:#5c5b5b; padding: 1px 1px 1px 15px; background: url('off.png') no-repeat left; }
+
+.tree li div.disabled, .tree li div.disabled:hover { background:#eee !important; }
+.tree li div.disabled a { text-decoration: none; font-size: 13px; color:#ccc; padding: 1px 1px 1px 15px; background: none; }
+
+.plus { background: url('more.png') no-repeat 0 4px; }
+.minus { background: url('less.png') no-repeat 0 4px; }
